@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('imagems.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+header .logo {
+    max-width: 100px;
+    height: auto;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+.content {
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.names p {
+    margin: 10px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    text-align: center;
+}
