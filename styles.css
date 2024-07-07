@@ -2,8 +2,11 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-}
 
+}
+h2{
+  color: white;
+}
 body {
     background-image: url('imagems.jpeg');
     background-attachment: fixed;
@@ -45,9 +48,10 @@ h2 {
 
 .names p {
     margin: 10px 0;
-    font-family: "Courier New", Courier, monospace;
+    font-family: Arial, sans-serif;
     font-size: 16px;
     text-align: center;
+    color: #fff; /* Default font color */
 }
 
 /* Tilt effect on hover */
@@ -62,4 +66,288 @@ h2 {
 
 .content.fade-out {
     opacity: 0.7;
+}
+
+
+
+.names {
+  display: none; /* Initially hide names */
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+  margin-top: 10px; /* Add margin to separate from heading */
+  transform: translateY(-20px); /* Move names up initially */
+}
+
+/* Click-to-toggle effect for all screen sizes */
+.content.clicked .names {
+  display: block;
+  opacity: 0;
+  transform: translateY(0px);
+  text-align: start;
+  animation: fadeInNames 2s forwards; 
+}
+
+@keyframes fadeInNames {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+.sign {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #1e488f,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2px; /* Ensure letter-spacing has a unit */
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #b0d2f4; /* Adjusted text color */
+  text-shadow: 0 0 0.6rem #b0d2f4, 0 0 1.5rem #6f9ed2,
+    -0.2rem 0.1rem 1rem #6f9ed2, 0.2rem 0.1rem 1rem #6f9ed2,
+    0 -0.5rem 2rem #1e488f, 0 0.5rem 3rem #1e488f; /* Adjusted shadow colors */
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #b0d2f4; /* Adjusted text color */
+    text-shadow: 0 0 0.6rem #b0d2f4, 0 0 1.5rem #6f9ed2,
+      -0.2rem 0.1rem 1rem #6f9ed2, 0.2rem 0.1rem 1rem #6f9ed2,
+      0 -0.5rem 2rem #1e488f, 0 0.5rem 3rem #1e488f; /* Adjusted shadow colors */
+  }
+  28%,
+  33% {
+    color: #6f9ed2; /* Adjusted text color */
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #1e488f; /* Adjusted text color */
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #1e488f; /* Adjusted text color */
+    text-shadow: none;
+  }
+  100% {
+    color: #b0d2f4; /* Adjusted text color */
+    text-shadow: 0 0 0.6rem #b0d2f4, 0 0 1.5rem #6f9ed2,
+      -0.2rem 0.1rem 1rem #6f9ed2, 0.2rem 0.1rem 1rem #6f9ed2,
+      0 -0.5rem 2rem #1e488f, 0 0.5rem 3rem #1e488f; /* Adjusted shadow colors */
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.gradient1 {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+.gradient2 {
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.gradient3 {
+  background: linear-gradient(to right, #FFD700, #000080);
+}
+
+.gradient4 {
+  background: linear-gradient(to right, #228B22, #8B0000);
+}
+
+.gradient5 {
+  background: linear-gradient(to right, #6A5ACD, #00CED1);
+}
+
+.gradient6 {
+  background: linear-gradient(to right, #DC143C, #00FF00);
+}
+
+.gradient7 {
+  background: linear-gradient(to right, #191970, #000000);
+}
+
+.gradient8 {
+  background: linear-gradient(to right, #FF00FF, #808000);
+}
+
+.gradient9 {
+  background: linear-gradient(to right, #FF4500, #1E90FF);
+}
+
+.gradient10 {
+  background: linear-gradient(to right, #800000, #F0E68C);
+}
+
+.gradient11 {
+  background: linear-gradient(to right, #6A5ACD, #191970);
+}
+
+.gradient12 {
+  background: linear-gradient(to right, #FFA500, #00FF00);
+}
+
+.gradient13 {
+  background: linear-gradient(to right, #8A2BE2, #00FF00);
+}
+
+.gradient14 {
+  background: linear-gradient(to right, #FF8C00, #4682B4);
+}
+.gradient15 {
+  background: linear-gradient(to right, #191970, #000000);
 }
